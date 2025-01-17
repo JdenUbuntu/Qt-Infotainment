@@ -10,5 +10,13 @@
         <file>ui/images/penang.png</file>
         <file>ui/images/padlock-unlock.png</file>
         <file>ui/images/carrender.jpg</file>
+        <file>ui/RightScreen/NavigationSearchBar.qml</file>
+        <file>ui/images/magnifying-glass.png</file>
+        <file>ui/BottomBar/HVACComponent.qml</file>
+        <file>ui/BottomBar/VolumeControlComponent.qml</file>
+        <file>ui/images/mute(1).png</file>
+        <file>ui/images/volume-down.png</file>
+        <file>ui/images/volumeup.png</file>
+        <file>ui/images/speaker.png</file>
     </qresource>
 </RCC>

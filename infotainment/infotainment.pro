@@ -5,7 +5,9 @@ QT += qml quick widgets
 CONFIG += c++11
 
 SOURCES += main.cpp \
-    controller/system.cpp
+    controller/system.cpp \
+    controller/hvachandler.cpp \
+    controller/audiocontroller.cpp
 
 RESOURCES += qml.qrc
 
@@ -16,7 +18,9 @@ QML_IMPORT_PATH =
 include(deployment.pri)
 
 HEADERS += \
-    controller/system.h
+    controller/system.h \
+    controller/hvachandler.h \
+    controller/audiocontroller.h
 
 DISTFILES += \
     images/carrender.jpg \
@@ -43,4 +47,5 @@ DISTFILES += \
     padlock-unlock.png \
     padlock.png \
     penang.png \
-    sports-car.png
+    sports-car.png \
+    ui/images/magnifying-glass.png

@@ -13,13 +13,15 @@ Rectangle {
 
    Plugin {
        id: mapPlugin
-       name: "osm"
+       name: "mapboxgl"
    }
 
-   Image  {
-       id: mapImage
-       source: "qrc:/ui/images/penang.png"
-       anchors.fill: parent
+   Map  {
+       id: map
+       anchors.fill:parent
+       plugin:mapPlugin
+       center: QtPositioning.coordinate(37.466, -122.144)
+       zoomLevel: 14
    }
 
    Image {
@@ -51,5 +53,44 @@ Text{
 
     text: systemHandler.currentTime
 }
+Text{
+    id: outdoorTemperatureDisplay
+    anchors{
+        left: dateTimeDisplay.right
+        leftMargin: 40
+        bottom: lockImage.bottom
+    }
+    font.pixelSize: 16
+    font.bold: true
+    color: "black"
+
+    text: systemHandler.outdoorTemp + "°C"
+}
+Text{
+    id: userNameDisplay
+    anchors{
+        left: outdoorTemperatureDisplay.right
+        leftMargin: 40
+        bottom: lockImage.bottom
+    }
+    font.pixelSize: 16
+    font.bold: true
+    color: "black"
+
+    text: systemHandler.userName
+}
+
+NavigationSearchBar{
+
+    id: navSearchBox
+    width: parent.width * 1/3
+    height: parent.height * 1/12
+
+    anchors{
+        left: lockImage.left
+        top: lockImage.bottom
+        topMargin: 15
+    }
+    }
     width:parent.width * 2/3
 }

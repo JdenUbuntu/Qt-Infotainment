@@ -4,8 +4,8 @@
 System::System(QObject *parent)
     : QObject(parent)
     , m_carLocked( true )
-    , m_outdoorTemp( 64 )
-    , m_userName( "Monty" )
+    , m_outdoorTemp( 30 )
+    , m_userName( "Elon" )
 {
     m_currentTimeTimer = new QTimer(this);
     m_currentTimeTimer->setInterval(500);
@@ -75,7 +75,7 @@ void System::setCurrentTime(QString currentTime)
 void System::currentTimeTimerTimeout()
 {
     QDateTime dateTime;
-    QString currentTime = dateTime.currentDateTime().toString("h:m ap");
+    QString currentTime = dateTime.currentDateTime().toString("hh:mm ap");
 
     setCurrentTime( currentTime );
 
